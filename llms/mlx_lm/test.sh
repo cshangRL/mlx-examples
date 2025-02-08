@@ -1,0 +1,17 @@
+python -m mlx_lm.lora \
+    --model Qwen/Qwen2.5-1.5B \
+    --train \
+    --data ./test_grpo/data \
+    --iters 5 \
+    --batch-size 1 \
+    --num-layers 4 \
+    --val-batches 1 \
+    --steps-per-report 1 \
+    --adapter-path qwen2.5-1.5B \
+    --max-seq-length 512 \
+    --grad-checkpoint \
+    --training-mode grpo \
+    --fine-tune-type lora \
+    --beta 0.05 \
+    --steps-per-eval 500 \
+    --group-size 2

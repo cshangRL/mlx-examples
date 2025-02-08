@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 # Define dataset directory
-dataset_dir = "/Users/cshang/Desktop/test_grpo/data"
+dataset_dir = "./data/Countdown-Tasks/data"
 
 # Convert each Parquet file to JSONL
 for file in os.listdir(dataset_dir):
